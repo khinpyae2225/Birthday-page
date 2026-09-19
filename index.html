@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday HanNi ♡</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:"Poppins","Segoe UI",sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 20%, #344d70, transparent 35%),
+        radial-gradient(circle at 80% 80%, #1d3557, transparent 40%),
+        linear-gradient(135deg,#0f1f36,#1b2f4d,#263f60);
+
+    color:#e9eef5;
+}
+
+.card{
+    width:90%;
+    max-width:390px;
+    padding:38px 25px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.10);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:35px;
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35),
+        inset 0 0 30px rgba(255,255,255,.05);
+
+    animation:cardIn 1.5s ease;
+}
+
+.cake{
+    font-size:75px;
+    display:inline-block;
+
+    animation:
+        cakeFloat 3s ease-in-out infinite,
+        glow 2s ease-in-out infinite;
+}
+
+h1{
+    margin-top:18px;
+    font-size:29px;
+    color:#f1f4f8;
+
+    text-shadow:
+        0 0 10px rgba(180,210,240,.35);
+
+    animation:textIn 1.8s ease;
+}
+
+.message{
+    margin-top:15px;
+    font-size:15px;
+    line-height:1.7;
+    color:#d5dfeb;
+
+    animation:textIn 2.3s ease;
+}
+
+.quote{
+    margin-top:18px;
+    font-size:14px;
+    font-style:italic;
+    color:#b9cbe0;
+
+    animation:textIn 2.8s ease;
+}
+
+/* Make a Wish Button */
+button{
+    margin-top:25px;
+    padding:13px 28px;
+
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:30px;
+
+    background:linear-gradient(
+        135deg,
+        #385a82,
+        #243f63
+    );
+
+    color:#ffffff;
+    font-size:14px;
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.3),
+        0 0 15px rgba(150,190,230,.15);
+
+    transition:.3s;
+
+    animation:buttonGlow 2s ease-in-out infinite;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+button:active{
+    transform:scale(.94);
+}
+
+/* Floating Hearts & Stars */
+.heart{
+    position:absolute;
+    bottom:-30px;
+    font-size:20px;
+    pointer-events:none;
+    color:#b9d2ee;
+
+    animation:floatUp linear forwards;
+}
+
+.sparkle{
+    position:absolute;
+    color:#dbe9f8;
+    font-size:18px;
+
+    animation:sparkleMove 2s infinite ease-in-out;
+}
+
+
+/* Surprise message */
+.surprise{
+    margin-top:15px;
+    font-size:13px;
+    color:#e6edf6;
+
+    opacity:0;
+    transform:translateY(8px);
+
+    transition:.6s ease;
+}
+
+.surprise.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes cardIn{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.9);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+@keyframes textIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes cakeFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+@keyframes glow{
+    0%,100%{
+        filter:drop-shadow(0 0 5px #8fb3d9);
+    }
+
+    50%{
+        filter:drop-shadow(0 0 22px #b9d7f5);
+    }
+}
+
+@keyframes buttonGlow{
+    0%,100%{
+        box-shadow:0 8px 25px rgba(0,0,0,.3);
+    }
+
+    50%{
+        box-shadow:0 8px 30px rgba(130,175,220,.35);
+    }
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:.8;
+    }
+
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes sparkleMove{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.3);
+    }
+}
+</style>
+</head>
+
+
+<body>
+<!-- Sparkles -->
+<div class="sparkle" style="top:12%;left:18%;">✦</div>
+<div class="sparkle" style="top:25%;right:15%;">✧</div>
+<div class="sparkle" style="bottom:20%;left:12%;">✦</div>
+<div class="sparkle" style="bottom:15%;right:18%;">✧</div>
+
+
+<!-- Main Card -->
+<div class="card">
+
+    <div class="cake">🎂</div>
+
+    <h1>
+        Happy Birthday NiNi♡
+    </h1>
+
+    <p class="message">
+        I hope this new chapter brings you alots of happiness, beautiful memories and everything your heart wishes for♡
+    </p>
+
+    <div class="quote">
+        “Lucky to have a friend like you♡”
+    </div>
+
+    <button onclick="makeWish()">
+        ✨ Make a Wish
+    </button>
+
+    <div class="surprise" id="surprise">
+    happy birthday again pr chee htoke♡<br>
+you're my sweetest friend ever😝
+    </div>
+
+</div>
+
+
+<script>
+
+const hearts = [
+    "♡",
+    "♥",
+    "💙",
+    "✦",
+    "✨"
+];
+
+
+/* Normal floating animation */
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        hearts[
+            Math.floor(
+                Math.random() * hearts.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        14 + Math.random() * 18 + "px";
+
+    heart.style.animationDuration =
+        5 + Math.random() * 5 + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(
+        () => heart.remove(),
+        10000
+    );
+}
+
+setInterval(createHeart,500);
+
+
+/* Make a Wish Surprise */
+function makeWish(){
+
+    const surprise =
+        document.getElementById("surprise");
+
+    surprise.classList.add("show");
+
+    /* Extra celebration */
+    for(let i = 0; i < 25; i++){
+
+        setTimeout(() => {
+
+            const heart =
+                document.createElement("div");
+
+            heart.className = "heart";
+
+            heart.innerHTML =
+                hearts[
+                    Math.floor(
+                        Math.random() * hearts.length
+                    )
+                ];
+
+            heart.style.left =
+                10 + Math.random() * 80 + "vw";
+
+            heart.style.fontSize =
+                16 + Math.random() * 25 + "px";
+
+            heart.style.animationDuration =
+                2 + Math.random() * 3 + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(
+                () => heart.remove(),
+                5000
+            );
+
+        }, i * 80);
+    }
+}
+
+</script>
+
+</body>
+</html>
